@@ -9,6 +9,40 @@
   </head>
 
   <body>
+
+    <header>
+      <div class = title>
+        title
+      </div>
+
+      <div class = "free_search">
+        <textarea name = "word">ワード検索欄</textarea>
+      </div>
+
+      <div class = top_meneu>
+        <ul>
+          <li>新規登録</li>
+          <li>ログイン</li>
+
+          <%
+=begin%>
+ 以下はログイン時のメニュー表示
+          <li>マイページ</li>
+          <li>投稿</li>
+          <li>ログアウト</li> 
+<%
+=end%>
+
+        </ul>
+      </div>
+
+
+    </header>
+
     <%= yield %>
+
+    <footer>
+    </footer>
+
   </body>
 </html>
