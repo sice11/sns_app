@@ -1,11 +1,21 @@
 header{
-    background-color: #62EEA2;
+    background-color: #9CFDAC;
 }
 
-ul {
+.title{
+    padding: 1rem 3rem 1rem 3rem;
+    color: #fff;
+    border-radius: 100vh;
+    background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
+    background-image: -webkit-linear-gradient(right, #9be15d 0%, #00e3ae 100%);
+    background-image: linear-gradient(to left, #9be15d 0%, #00e3ae 100%);
+}
+
+.free_search{
+    display: inline-block;
+}
+
+ul, li {
     list-style: none;
-}
-
-.top_meneu li {
-    float: left;
+    display: inline-block;
 }
