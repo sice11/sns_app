@@ -19,9 +19,9 @@
         <textarea name = "word">ワード検索欄</textarea>
       </div>
 
-        <ul class = header_menu>
-          <li>新規登録</li>
-          <li>ログイン</li>
+      <ul class = header_right>
+        <li>新規登録</li>
+        <li>ログイン</li>
 
           <%
 =begin%>
@@ -32,7 +32,7 @@
 <%
 =end%>
 
-        </ul>
+      </ul>
 
 
     </header>
@@ -40,6 +40,14 @@
     <%= yield %>
 
     <footer>
+      <div class = title>
+        <h2>title</h2>
+      </div>
+
+      <div class = memo>
+        無断添削を禁じます。
+      </div>
+
     </footer>
 
   </body>

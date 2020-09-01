@@ -1,9 +1,13 @@
 header{
     background-color: #9CFDAC;
+    width: 100%;
+    margin: 0px;
 }
 
 .title{
+    width: 60px;
     padding: 1rem 3rem 1rem 3rem;
+    margin: 10px;
     color: #fff;
     border-radius: 100vh;
     background-image: -webkit-gradient(linear, right top, left top, from(#9be15d), to(#00e3ae));
@@ -12,10 +16,28 @@ header{
 }
 
 .free_search{
-    display: inline-block;
+    float: right;
 }
 
 ul, li {
     list-style: none;
     display: inline-block;
+}
+
+.image{
+    width: 100%;
+}
+
+
+// 共通部分
+
+div {
+    display: inline-block;
+}
+
+
+// footer
+.memo{
+    position: relative;
+    right: -50%;
 }
