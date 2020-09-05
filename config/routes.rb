@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   root "homes#top"
 
+  get "/login_top", to: "homes#top_login", as: "longin_top"
+
 end
