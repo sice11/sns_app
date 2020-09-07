@@ -7,11 +7,11 @@ Rails.application.routes.draw do
 
   get "users/index", to: "users#index", as: "users_index"
 
-  get "users/edit", to: "users#edit", as: "users_edit"
-  patch "users/update", to: "users#update", as: "users_update"
+  get "users/edit/:id", to: "users#edit", as: "users_edit"
+  patch "users/update/:id", to: "users#update", as: "users_update"
 
 
-  get "users/show", to: "users#show", as: "users_show"
+  get "users/show/:id", to: "users#show", as: "users_show"
 
   # トップページ
   root "homes#top"

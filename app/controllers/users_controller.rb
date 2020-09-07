@@ -17,14 +17,19 @@ class UsersController < ApplicationController
 
 
   def edit
+    @user = User.find_by(id: params[:id])
   end
   def update
-    @user.update_attributes(users_update_path)
+    @user = User.find_by(id: params[:id])
+    if @user.update_attributes(user_params)
+      redirect_to users_show_path(@user.id)
+    end
   end
 
 
 
   def show
+    @user = User.find_by(params[:id])
   end
 
   private
