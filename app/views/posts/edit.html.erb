@@ -1,0 +1,9 @@
+投稿編集画面<br>
+<%= form_for @post, url: posts_update_path(@post.id) do |f| %>
+
+    <%= f.label :content, "投稿内容" %><br>
+    <%= f.text_field :content %><br>
+
+    <%= f.submit "保存" %>
+    
+<% end %>

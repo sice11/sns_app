@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  # 投稿
+  get "posts/new", to: "posts#new", as: "posts_new"
+
+  get "posts/index", to: "posts#index", as: "posts_index"
+
+  get "posts/show/:id", to: "posts#show", as: "posts_show"
+  patch "posts/update/:id", to: "posts#update", as: "posts_update"
+
+  get "posts/edit/:id", to:"posts#edit", as: "posts_edit"
+
   # ユーザー
   get "users/new", to: "users#new", as: "users_new"
   post "users/create", to: "users#create", as: "users_create"
@@ -7,10 +17,10 @@ Rails.application.routes.draw do
 
   get "users/index", to: "users#index", as: "users_index"
 
+  get "users/show/:id", to: "users#show", as: "users_show"
+
   get "users/edit/:id", to: "users#edit", as: "users_edit"
   patch "users/update/:id", to: "users#update", as: "users_update"
-
-  get "users/show/:id", to: "users#show", as: "users_show"
 
   patch "users/delete/:id", to: "users#delete", as: "users_delete"
 

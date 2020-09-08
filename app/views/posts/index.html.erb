@@ -1,0 +1,4 @@
+全ユーザーの投稿一覧<br>
+<% @posts.each do |post| %>
+    <%= link_to post.content, posts_show_path(post.id) %>
+<% end %>
