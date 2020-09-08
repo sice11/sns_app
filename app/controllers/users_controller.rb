@@ -29,7 +29,17 @@ class UsersController < ApplicationController
 
 
   def show
-    @user = User.find_by(params[:id])
+    @user = User.find_by(id: params[:id])
+  end
+
+  def delete
+    @user = User.find_by(id: params[:id])
+    if @user
+      @user.del_flg = 1
+      if @user.save
+        redirect_to users_index_path
+      end
+    end
   end
 
   private

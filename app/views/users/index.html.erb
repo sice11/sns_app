@@ -1,4 +1,6 @@
 ユーザー一覧<br>
 <% @users.each do |user| %>
-    <%= user.name %><br>
+    <% if user.del_flg == 0 || user.del_flg == nil %>
+        <%= link_to user.name, users_show_path(user.id) %><br>
+    <% end %>
 <% end %>

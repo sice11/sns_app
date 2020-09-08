@@ -3,4 +3,4 @@
 <%= @user.email %><br>
 <br>
 <%= link_to "編集", users_edit_path(@user.id) %><br>
-削除
+<%= link_to "退会", users_delete_path(@user.id), method: :patch, data: {confirm: "本当に退会しますか？"} %>

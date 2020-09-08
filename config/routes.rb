@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   get "users/edit/:id", to: "users#edit", as: "users_edit"
   patch "users/update/:id", to: "users#update", as: "users_update"
 
-
   get "users/show/:id", to: "users#show", as: "users_show"
+
+  patch "users/delete/:id", to: "users#delete", as: "users_delete"
 
   # トップページ
   root "homes#top"
