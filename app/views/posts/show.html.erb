@@ -1,4 +1,4 @@
 投稿詳細画面<br>
 <%= @post.content %><br>
 <%= link_to "編集", posts_edit_path(@post.id) %>
-削除<br>
+<%= link_to "削除", posts_delete_path(@post.id), method: :patch, data: {confirm: "削除しますか？"} %>

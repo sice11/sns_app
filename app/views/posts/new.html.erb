@@ -1,2 +1,6 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+新規投稿
+<%= form_for @post, url: posts_create_path do |f| %>
+    <%= f.label :contest, "投稿" %><br>
+    <%= f.text_field :content %><br>
+    <%= f.submit "投稿" %><br>
+<% end %>

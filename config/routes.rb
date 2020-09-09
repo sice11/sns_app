@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   # 投稿
   get "posts/new", to: "posts#new", as: "posts_new"
+  post "posts/create", to: "posts#create", as: "posts_create"
 
   get "posts/index", to: "posts#index", as: "posts_index"
 
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
   patch "posts/update/:id", to: "posts#update", as: "posts_update"
 
   get "posts/edit/:id", to:"posts#edit", as: "posts_edit"
+
+  patch "posts/delete/:id", to: "posts#delete", as: "posts_delete" 
 
   # ユーザー
   get "users/new", to: "users#new", as: "users_new"

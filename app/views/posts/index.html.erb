@@ -1,4 +1,6 @@
 全ユーザーの投稿一覧<br>
 <% @posts.each do |post| %>
-    <%= link_to post.content, posts_show_path(post.id) %>
+    <% if post.del_flg == 0 || post.del_flg == nil %>
+        <%= link_to post.content, posts_show_path(post.id) %><br>
+    <% end %>
 <% end %>
