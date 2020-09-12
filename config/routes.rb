@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  # ログイン
+  # get 'sessions/new'
+  get "/login", to: "sessions#new", as: "login_form"
+  post "/login", to: "sessions#create", as: "login"
+  delete "/logout", to: "sessions#delete", as: "logout"
+
   # 投稿
   get "posts/new", to: "posts#new", as: "posts_new"
   post "posts/create", to: "posts#create", as: "posts_create"
@@ -11,7 +17,7 @@ Rails.application.routes.draw do
 
   get "posts/edit/:id", to:"posts#edit", as: "posts_edit"
 
-  patch "posts/delete/:id", to: "posts#delete", as: "posts_delete" 
+  patch "posts/destroy/:id", to: "posts#destroy", as: "posts_destroy" 
 
   # ユーザー
   get "users/new", to: "users#new", as: "users_new"
