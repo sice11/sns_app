@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SnsApp</title>
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>SnsApp</title>
+  <%= csrf_meta_tags %>
 
-  <body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <header>
-      <div class = title>
-        <h2>title</h2>
-      </div>
+<body>
 
-      <div class = "free_search">
-        <textarea name = "word">ワード検索欄</textarea>
-      </div>
+  <header>
+    <div class=title>
+      <h2>title</h2>
+    </div>
 
-      <ul class = header_right>
-        <li><%= link_to "新規登録", users_new_path %></li>
-        <li><%= link_to "ログイン", login_form_path %></li>
+    <div class="free_search">
+      <textarea name="word">ワード検索欄</textarea>
+    </div>
 
-          <%
+    <ul class=header_right>
+      <% if logged_in? %>
+      <li><%= link_to "新規登録", users_new_path %></li>
+      <li><%= link_to "ログイン", login_form_path %></li>
+      <% else %>
+      <li><%= link_to "ログアウト", "#" %></li>
+      <% end %>
+
+      <%
 =begin%>
- 以下はログイン時のメニュー表示
-          <li>マイページ</li>
-          <li>投稿</li>
-          <li>ログアウト</li> 
-<%
+      以下はログイン時のメニュー表示
+      <li>マイページ</li>
+      <li>投稿</li>
+      <li>ログアウト</li>
+      <%
 =end%>
 
-      </ul>
+    </ul>
 
 
-    </header>
+  </header>
 
-    <%= yield %>
+  <%= yield %>
 
-    <footer>
-      <div class = title>
-        <h2>title</h2>
-      </div>
+  <footer>
+    <div class=title>
+      <h2>title</h2>
+    </div>
 
-      <div class = memo>
-        無断添削を禁じます。
-      </div>
+    <div class=memo>
+      無断添削を禁じます。
+    </div>
 
-    </footer>
+  </footer>
 
-  </body>
+</body>
+
 </html>
