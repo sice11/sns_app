@@ -20,8 +20,12 @@
       </div>
 
       <ul class = header_right>
-        <li><%= link_to "新規登録", users_new_path %></li>
-        <li><%= link_to "ログイン", login_form_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "新規登録", users_new_path %></li>
+          <li><%= link_to "ログイン", login_form_path %></li>
+        <% else %>
+          <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+        <% end %>
 
           <%
 =begin%>
