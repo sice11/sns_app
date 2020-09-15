@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  # フリーワード
+  get "freewords/new", to: "freewords#new", as: "freewords_new"
+
+  get "freewords/edit", to: "freewords#edit", as: "freewords_edit"
+
   # ログイン
   # get 'sessions/new'
   get "/login", to: "sessions#new", as: "login_form"
