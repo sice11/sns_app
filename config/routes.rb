@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # get 'sessions/new'
   get "/login", to: "sessions#new", as: "login_form"
   post "/login", to: "sessions#create", as: "login"
-  delete "/logout", to: "sessions#delete", as: "logout"
+  post "/logout", to: "sessions#destroy", as: "logout"
 
   # 投稿
   get "posts/new", to: "posts#new", as: "posts_new"
