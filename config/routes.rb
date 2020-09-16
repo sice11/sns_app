@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   # フリーワード
   get "freewords/new", to: "freewords#new", as: "freewords_new"
+  post "freewords/create", to: "freewords#create", as: "freewords_create"
 
   get "freewords/edit", to: "freewords#edit", as: "freewords_edit"
 

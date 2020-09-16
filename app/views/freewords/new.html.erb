@@ -1,2 +1,22 @@
-<h1>Freewords#new</h1>
-<p>Find me in app/views/freewords/new.html.erb</p>
+<h2>フリーワードの登録</h2>
+
+<%= form_for @freeword, url: freewords_create_path do |f| %>
+
+    <%= f.label :word, "単語" %>
+    <%= f.text_field :word %>
+
+    <%= f.label :word, "単語" %>
+    <%= f.text_field :word %>
+
+    <%= f.label :word, "単語" %>
+    <%= f.text_field :word %>
+
+    <%= f.label :word, "単語" %>
+    <%= f.text_field :word %>
+
+    <%= f.label :word, "単語" %>
+    <%= f.text_field :word %>
+
+    <%= f.submit "保存" %>
+
+<% end %>
