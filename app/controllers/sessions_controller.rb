@@ -6,9 +6,10 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(email: params[:user][:email])
     if @user && @user.authenticate(params[:user][:password])
-      log_in(@user)
+      log_in @user
       redirect_to users_show_path(@user.id)
     else
+      flash.now[:danger] = "メールアドレス、またはパスワードが間違っています。"
       render :new
     end
   end

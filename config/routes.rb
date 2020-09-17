@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # get 'sessions/new'
   get "/login", to: "sessions#new", as: "login_form"
   post "/login", to: "sessions#create", as: "login"
-  post "/logout", to: "sessions#destroy", as: "logout"
+  delete "/logout", to: "sessions#destroy", as: "logout"
 
   # 投稿
   get "posts/new", to: "posts#new", as: "posts_new"
