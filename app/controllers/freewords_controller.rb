@@ -11,6 +11,10 @@ class FreewordsController < ApplicationController
     end
   end
 
+  def show
+    @freeword = Freeword.find_by(id: params[:id])
+  end
+
   def edit
   end
 

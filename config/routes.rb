@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "freewords/new", to: "freewords#new", as: "freewords_new"
   post "freewords/create", to: "freewords#create", as: "freewords_create"
 
+  get "freewords/show/:id", to: "freewords#show", as: "freewords_show"
+
   get "freewords/edit", to: "freewords#edit", as: "freewords_edit"
 
   # ログイン
