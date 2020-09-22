@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
     if @post.save
       redirect_to posts_index_path
     end
@@ -16,6 +16,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+    @user = User.find_by(id: @post.user_id)
   end
 
   def edit
@@ -45,4 +46,11 @@ class PostsController < ApplicationController
         :content
       )
     end
+
+    # def post_params_id
+    #   params.require(:post).permit(
+    #     :content,
+    #     :user_id
+    #   )
+    # end
 end

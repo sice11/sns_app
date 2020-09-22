@@ -21,6 +21,7 @@
 
       <ul class = header_right>
         <% if logged_in? %>
+          <li><%= link_to "新規投稿", posts_new_path %></li>
           <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
         <% else %> 
           <li><%= link_to "新規登録", users_new_path %></li>

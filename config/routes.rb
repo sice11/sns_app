@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   get "posts/edit/:id", to:"posts#edit", as: "posts_edit"
 
-  patch "posts/destroy/:id", to: "posts#destroy", as: "posts_destroy" 
+  patch "posts/delete/:id", to: "posts#delete", as: "posts_delete" 
 
   # ユーザー
   get "users/new", to: "users#new", as: "users_new"
