@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200920100918) do
+ActiveRecord::Schema.define(version: 20200923143522) do
 
   create_table "freewords", force: :cascade do |t|
     t.string "word"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "del_flg", default: 0
+    t.integer "user_id"
+    t.string "word2"
+    t.string "word3"
+    t.string "word4"
+    t.string "word5"
   end
 
   create_table "posts", force: :cascade do |t|

@@ -3,4 +3,5 @@ class User < ApplicationRecord
     
     # has_many :posts, dependent: :destroy, foreign_key: :post_user_id
     has_many :posts, dependent: :destroy
+    has_many :freewords, dependent: :destroy
 end

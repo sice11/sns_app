@@ -2,5 +2,17 @@
 <%= @user.name %><br>
 <%= @user.email %><br>
 <br>
+<br>
+フリーワード<br>
+<%= @user.freewords %><br>
+<%
+=begin%>
+ <%= freeword.word2 %><br>
+<%= freeword.word3 %><br>
+<%= freeword.word4 %><br>
+<%= freeword.word5 %><br> 
+<%
+=end%>
+<br>
 <%= link_to "編集", users_edit_path(@user.id) %><br>
 <%= link_to "退会", users_delete_path(@user.id), method: :patch, data: {confirm: "本当に退会しますか？"} %>

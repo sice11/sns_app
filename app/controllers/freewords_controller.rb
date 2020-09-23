@@ -4,10 +4,11 @@ class FreewordsController < ApplicationController
   end
 
   def create
-    @freeword = Freeword.new(freeword_params)
+    @freeword = current_user.freewords.new(freeword_params)
+    # @freeword = Freeword.new(freeword_params)
     if @freeword.save
       # userのidと紐づけしてから
-      # redirect_to users_show_path(@user.id)
+      redirect_to users_show_path(@user.id)
     end
   end
 
