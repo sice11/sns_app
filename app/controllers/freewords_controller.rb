@@ -5,10 +5,11 @@ class FreewordsController < ApplicationController
 
   def create
     @freeword = current_user.freewords.new(freeword_params)
+    @freeword.user_id = current_user.id
     # @freeword = Freeword.new(freeword_params)
     if @freeword.save
       # userのidと紐づけしてから
-      redirect_to users_show_path(@user.id)
+      redirect_to freewords_show_path(@freeword.id)
     end
   end
 
@@ -21,6 +22,12 @@ class FreewordsController < ApplicationController
 
   private
   def freeword_params
-    params.require(:freeword).permit(:word)
+    params.require(:freeword).permit(
+      :word,
+      :word2,
+      :word3,
+      :word4,
+      :word5
+    )
   end
 end

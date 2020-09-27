@@ -4,7 +4,13 @@
 <br>
 <br>
 フリーワード<br>
-<%= @user.freewords %><br>
+<% @user.freewords.each do |freeword| %><br>
+<%= freeword.word %><br>
+<%= freeword.word2 %><br>
+<%= freeword.word3 %><br>
+<%= freeword.word4 %><br>
+<%= freeword.word5 %><br>
+<% end %>
 <%
 =begin%>
  <%= freeword.word2 %><br>
