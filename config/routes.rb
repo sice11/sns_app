@@ -6,7 +6,8 @@ Rails.application.routes.draw do
 
   get "freewords/show/:id", to: "freewords#show", as: "freewords_show"
 
-  get "freewords/edit", to: "freewords#edit", as: "freewords_edit"
+  get "freewords/edit/:id", to: "freewords#edit", as: "freewords_edit"
+  patch "freewords/update/:id", to: "freewords#update", as: "freewords_update"
 
   # ログイン
   # get 'sessions/new'
@@ -30,7 +31,6 @@ Rails.application.routes.draw do
   # ユーザー
   get "users/new", to: "users#new", as: "users_new"
   post "users/create", to: "users#create", as: "users_create"
-  get "users/new_freeword", to: "users#new_freeword", as: "users_new_freeword"
 
   get "users/index", to: "users#index", as: "users_index"
 

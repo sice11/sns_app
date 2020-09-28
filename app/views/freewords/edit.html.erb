@@ -1,2 +1,22 @@
-<h1>Freewords#edit</h1>
-<p>Find me in app/views/freewords/edit.html.erb</p>
+フリーワードの編集<br>
+
+<%= form_for @freeword, url: freewords_update_path(@freeword.id) do |f| %>
+
+    <%= f.label :word, "単語" %>
+    <%= f.text_field :word %>
+
+    <%= f.label :word2, "単語2" %>
+    <%= f.text_field :word2 %>
+
+    <%= f.label :word3, "単語3" %>
+    <%= f.text_field :word3 %>
+
+    <%= f.label :word4, "単語4" %>
+    <%= f.text_field :word4 %>
+
+    <%= f.label :word5, "単語5" %>
+    <%= f.text_field :word5 %>
+
+    <%= f.submit "保存" %>
+
+<% end %>
