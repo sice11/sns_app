@@ -23,8 +23,8 @@ class FreewordsController < ApplicationController
 
   def update
     @freeword = Freeword.find_by(id: params[:id])
-    if @freeword.update_attirbute(freeword_params)
-      redirect_to users_show_path(freeword.user.id)
+    if @freeword.update_attributes(freeword_params)
+      redirect_to users_show_path(@freeword.user.id)
     end
   end
 
