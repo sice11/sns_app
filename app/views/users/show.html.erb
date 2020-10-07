@@ -10,7 +10,7 @@
     <%= freeword.word3 %><br>
     <%= freeword.word4 %><br>
     <%= freeword.word5 %><br>
-    <%= link_to "フリーワードの編集", freewords_edit_path(@user.freewords) %>
+    <%= link_to "フリーワードの編集", freewords_edit_path(freeword) %>
 <% end %>
 <br>
 <%= link_to "編集", users_edit_path(@user.id) %><br>

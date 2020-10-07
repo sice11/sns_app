@@ -1,6 +1,6 @@
 フリーワードの編集<br>
 
-<%= form_for @freeword, url: freewords_update_path(@freeword.id) do |f| %>
+<%= form_for @freeword, url: freewords_update_path(@freeword.user.id) do |f| %>
 
     <%= f.label :word, "単語" %>
     <%= f.text_field :word %>
